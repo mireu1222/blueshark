@@ -1,0 +1,32 @@
+<div class="thumb-list-wrap">
+    <!-- 게시글이 있을 때 -->
+    <ul class="lists">
+        @@for (var i=0; i < lists.length; i++) {
+            <li class="items">
+                @@if(!context.videoType && !context.eventType) {
+                <a href="@@link" class="thumb" style="background-image:url('/images/@thumb.jpg');">제목이 들어감 자세히보기</a>
+                }
+                @@if(context.eventType) {
+                <a href="@@link" class="thumb event" style="background-image:url('/images/@thumb.jpg');">제목이 들어감 자세히보기</a>
+                }
+                @@if(context.videoType) {
+                <a href="#video" class="thumb video" style="background-image:url('/images/@thumb.jpg');" data-control="modal">제목이 들어감 영상 보기</a>
+                }
+                <div class="info">
+                    @@if(context.videoType) {
+                    <p class="src" aria-hidden="true">`+lists[i].video+`</p>
+                    <a href="#video" class="tit" data-control="modal">제목이 들어감</a>
+                    }
+                    @@if(!context.videoType) {
+                    <a href="@@link" class="tit">제목이 들어감</a>
+                    }
+                    <p class="desc">내용이 들어감</p>
+                </div>
+            </li>
+        }
+    </ul>
+    <!-- // 게시글이 있을 때 -->
+    <!-- nodata -->
+    <p class="nodata">게시글이 없습니다.</p>
+    <!-- // nodata -->
+</div>

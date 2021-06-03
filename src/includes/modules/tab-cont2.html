@@ -1,0 +1,20 @@
+<li>
+    <div class="inner">
+        <span class="thumb" aria-hidden="true"><img src="/images/img/@@img.jpg" alt=""></span>
+        <div class="info">
+            <span class="flag flag-lg flag-basic">선택 @@num</span>
+            <p class="price">@@price원</p>
+            <ul class="options">
+                @@for(var i=0; i < options.length; i++){
+                <li>`+options[i]+`</li>
+                }
+            </ul>
+            <ul class="more">
+                @@for(var j=0; j < more.length; j++) {
+                <li>`+more[j]+`</li>
+                }
+            </ul>
+        </div>
+        <a href="https://talk.naver.com/ct/wc4mk2?frm=mnmb&frm=nmb_detail" class="btn btn-border-point" target="_blank"><span>예약하기</span></a>
+    </div>
+</li>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0402 : true,
+                title : '가평레일바이크'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tour-list.html', {
+                    thumb : 'img-sub0402-1',
+                    eyebrow : '제휴관광지',
+                    title : '가평레일바이크',
+                    desc : '레일바이크는 페달을 밟아 철로 위를 달리는 네바퀴 자전거로<br>철도(rail)와 자전거(bike)를 합쳐 레일바이크라고 부르게 되었습니다.<br>강촌 레일바이크는 코스가 크게 3개로<br>&middot;김유정역 &lt;김유정역 출발 ~ 강촌도착 8km&gt;<br>&middot;강촌역 &lt;강촌역 출발 ~ 김유정역 도착 8km&gt;<br>&middot;경강역 &lt;경강역 ~ 가평철교 왕복 7.2km&gt;<br>가 있으며 2인용과 4인용 레일바이크를 이용할 수 있습니다.',
+                    img : 'img-sub0402-',
+                    imgs : 3
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

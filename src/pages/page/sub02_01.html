@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0201 : true,
+                title : '상품소개'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/sub-tab.html', {
+                    collapse : true,
+                    href : 'cont',
+                    list : [
+                        '초대형워터파크', '수상스키', '웨이크보드', '블롭점프', '워터슬라이드', '플라이피쉬', '디스코보트',
+                        '더블팡', '디스코팡', '바나나보트', '밴드웨건', '핵사곤', '땅콩', '호떡', '팡팡', '와플',
+                        '와일드플라이어', '제트보트', '카약', '물자전거', '남이섬보팅'
+                    ]
+                })
+
+                @@loop('./modules/tab-cont.html', [
+                    {
+                        id : 'cont1',
+                        name : '초대형 워터파크',
+                        title : '가평 최대 규모의<br>초대형 워터파크',
+                        desc : '아이부터 어른까지 하루종일 놀아도 모자란 블루샤크의 초대형 워터파크!!<br>패키지 이용시 무료입장입니다!',
+                        img : 'img-sub0201-01'
+                    },
+                    {
+                        id : 'cont2',
+                        name : '수상스키',
+                        title : '수상스키하면 가평 블루샤크',
+                        desc : '초보자분들 대환영♥ 저렴하게 즐겨보세요!',
+                        img : 'img-sub0201-02'
+                    },
+                    {
+                        id : 'cont3',
+                        name : '웨이크보드',
+                        title : '초보자님들도 적극환영♥',
+                        desc : '친절히 가르쳐 드립니다! 가평 웨이크보드!<br>블루샤크에서 만나보세요',
+                        img : 'img-sub0201-03'
+                    },
+                    {
+                        id : 'cont4',
+                        name : '블롭점프',
+                        title : '블롭점프하면 블루샤크♥',
+                        desc : '원하시는 만큼 하늘 높이 시원하게 날려드립니다!!',
+                        img : 'img-sub0201-04'
+                    },
+                    {
+                        id : 'cont5',
+                        name : '워터슬라이드',
+                        title : '20미터 자체제작 워터슬라이드',
+                        desc : '이미 많은 분들이 인정해 주시고 엄지척 해주시는 블루샤크 최고의 수상놀이!<br>오직 블루샤크 패키지를 이용하시는 여러분들에게만 무료입니다!',
+                        img : 'img-sub0201-05'
+                    },
+                    {
+                        id : 'cont6',
+                        name : '플라이피쉬',
+                        title : '스릴넘치는 플라이피쉬♥',
+                        desc : '하늘을 나를 짜릿한 즐거움!!! 오직 블루샤크에서만 느끼실 수 있습니다!',
+                        img : 'img-sub0201-06'
+                    },
+                    {
+                        id : 'cont7',
+                        name : '디스코보트',
+                        title : '엄청난 스릴을 자랑하는!',
+                        desc : '빙글빙글~ 돌아버리게 재미나는 디스코보트♥',
+                        img : 'img-sub0201-07'
+                    },
+                    {
+                        id : 'cont8',
+                        name : '더블팡',
+                        title : '더블 팡 팡♥',
+                        desc : '모두모이세요!! 왼쪽으로 쏠리고 오른쪽으로 쏠리고~ 꽉 잡으세요',
+                        img : 'img-sub0201-08'
+                    },
+                    {
+                        id : 'cont9',
+                        name : '디스코팡',
+                        title : '안정감 있게 즐겨보세요♥',
+                        desc : '빙글 빙글 돌다가 좌우로 왔다 갔다!!!',
+                        img : 'img-sub0201-09'
+                    },
+                    {
+                        id : 'cont10',
+                        name : '바나나보트',
+                        title : '강에서 타는 바나나보트',
+                        desc : '뭉쳐야 산다!!! 딴짓하면 빠집니다!!!',
+                        img : 'img-sub0201-10'
+                    },
+                    {
+                        id : 'cont11',
+                        name : '밴드웨건',
+                        title : '앉아서도 서서도 즐거운 밴드웨건',
+                        desc : '슬라이딩과 콩콩 튀어다니는 즐거움!!',
+                        img : 'img-sub0201-11'
+                    },
+                    {
+                        id : 'cont12',
+                        name : '핵사곤',
+                        title : '스릴넘치는 핵사곤',
+                        desc : '슬라이드의 끝.판.왕!!!!!',
+                        img : 'img-sub0201-12'
+                    },
+                    {
+                        id : 'cont13',
+                        name : '땅콩',
+                        title : '너무너무 신나는 땅콩♥',
+                        desc : '통통통 팡팡팡 엉덩이 조심하세요!!!',
+                        img : 'img-sub0201-13'
+                    },
+                    {
+                        id : 'cont14',
+                        name : '호떡',
+                        title : '말이 필요없는 쎈놈!',
+                        desc : '죽을힘을 다해 꽉 잡으세요!!',
+                        img : 'img-sub0201-14'
+                    },
+                    {
+                        id : 'cont15',
+                        name : '팡팡',
+                        title : '진짜가 나타났다 더 쎈놈!',
+                        desc : '원하시는 만큼 하늘 높이 시원하게 날려드립니다!!',
+                        img : 'img-sub0201-15'
+                    },
+                    {
+                        id : 'cont16',
+                        name : '와플',
+                        title : '안정감과 스릴감♥',
+                        desc : '아이들과 함께 안정감 속에서 느끼는 스피드함!',
+                        img : 'img-sub0201-16'
+                    },
+                    {
+                        id : 'cont17',
+                        name : '와일드플라이어',
+                        title : '긴장의 끈을 놓지마세요!!',
+                        desc : '얕보다가 뒤집어 집니다!!!',
+                        img : 'img-sub0201-17'
+                    },
+                    {
+                        id : 'cont18',
+                        name : '제트보트',
+                        title : '제트보트는 블루샤크♥',
+                        desc : '상어 제트보트로 물위를 질주해보세요!',
+                        img : 'img-sub0201-18'
+                    },
+                    {
+                        id : 'cont19',
+                        name : '카약',
+                        title : '강물에서 타는 카약!',
+                        desc : '고요하고 낭만있게 카약을 즐기세요♥',
+                        img : 'img-sub0201-19'
+                    },
+                    {
+                        id : 'cont20',
+                        name : '물자전거',
+                        title : '남자분 동반은 필수!!',
+                        desc : '조금 힘드실 수 있어요 ㅠㅠ',
+                        img : 'img-sub0201-20'
+                    },
+                    {
+                        id : 'cont21',
+                        name : '남이섬보팅',
+                        title : '남이섬으로 렛츠 고우!',
+                        desc : '단체손님 환영합니다♥',
+                        img : 'img-sub0201-21'
+                    },
+                ])
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    minHeight(); 
+
+    let btnPrev = $('.swiper-btn.prev');
+    let btnNext = $('.swiper-btn.next');
+    $('.img-slider .swiper-container').each(function(index, element){
+        $(this).addClass('swiper' + index);
+        btnPrev[index].classList.add('swiper-prev' + index);
+        btnNext[index].classList.add('swiper-next' + index);
+
+        new Swiper('.img-slider .swiper' + index, {
+            loop : true,
+            slidesPerView : 2,
+            slidesPerGroup : 1,
+            spaceBetween : 16,
+            navigation : {
+                nextEl : '.swiper-next'+index,
+                prevEl : '.swiper-prev'+index,
+            },
+            breakpoints : {
+                768 : {
+                    spaceBetween : 10
+                }
+            }
+        });
+    });
+
+    imgSwitch();
+    hashTabActive();
+</script>
+</html>

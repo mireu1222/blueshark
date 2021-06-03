@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0405 : true,
+                title : '제이드가든'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tour-list.html', {
+                    thumb : 'img-sub0405-1',
+                    eyebrow : '제휴관광지',
+                    title : '제이드가든',
+                    desc : '중부지방에서 생육이 가능한 국내외 유용식물자원의 수집을 통한 새로운 테마정원을 개발하여 자연생태 교육장을 마련하고, 누구나 편안함을 느낄 수 있는 서식지 외 보전기관으로써의 재정자립형 명품 수목원을 추구하고 있으며 2,662종류의 보유식물과 드라이가든, 웨딩가든, 이끼원, 블루베리원 등 총 24개소의 테마소원으로 이루어져 있습니다. 또한 레스토랑, 기념품샵, 유리온실, 매점 등 편리한 시설이 배치되어 있습니다.',
+                    img : 'img-sub0405-',
+                    imgs : 3
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

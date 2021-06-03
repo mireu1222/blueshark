@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0404 : true,
+                title : '남이섬'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tour-list.html', {
+                    thumb : 'img-sub0404-1',
+                    eyebrow : '제휴관광지',
+                    title : '남이섬',
+                    desc : '서울에서 36km 떨어진 위치에 총 면적은 14만평에 이르는 남이섬!<br>1960년부터 넓게 펼쳐진 잔디밭과 밤나무, 자작나무, 은행나무, 단풍나무, 소나무 등을 심은 숲을 가꾸고 각종 놀이시설, 숙박시설, 동물원, 식물원, 유람선까지 완벽하게 조성하여 종합휴양지로서의 면모를 갖추었습니다. 남이섬은 사계절 꾸미지 않은 자연의 아름다움과 운치를 간직한 곳으로서 젊은이들에게는 낭만을, 연인들에게는 추억을, 가족과 직장인들은 따사로운 정을 듬뿍 담아가는 휴식공간으로 사랑받고 있습니다. ',
+                    img : 'img-sub0404-',
+                    imgs : 3
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

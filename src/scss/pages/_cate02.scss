@@ -1,0 +1,309 @@
+/* 수상레져 */
+.container.cate02 {
+    // 상품소개
+    .tab-contents {
+        padding-top:70px;
+        @include mobile {
+            padding-top:30px;
+        }
+    }
+    // 수상패키지
+    .tit-wrap {
+        text-align:center;
+        .tit {
+            @include font-title;
+            color:$point;
+            font-weight:700;
+        }
+        .desc {
+            margin-top:20px;
+            @include font-lg;
+            word-break:keep-all;
+        }
+    }
+    .pkg-list-wrap {
+        margin-top:45px;
+        @include mobile {
+            margin-top:20px;
+        }
+        .lists {
+            > li {
+                margin-top:30px;
+                @include mobile {
+                    margin-top:15px;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            .inner {
+                position:relative;
+                padding:24px 190px 24px 30px;
+                border:1px solid $border;
+                border-radius:4px;
+                @include clearfix;
+                @include tablet {
+                    padding-right:30px;
+                }
+                @include mobile {
+                    padding:20px;
+                }
+                .thumb {
+                    display:block;
+                    width:310px;
+                    float:left;
+                    @include tablet {
+                        width:260px;
+                    }
+                    @include mobile {
+                        float:none;
+                        width:100%;
+                        margin-bottom:15px;
+                    }
+                    img {
+                        width:100%;
+                        border-radius:10px;
+                        overflow:hidden;
+                    }
+                }
+                .info {
+                    margin-left:360px;
+                    @include tablet {
+                        margin-left:290px;
+                    }
+                    @include mobile {
+                        margin-left:0;
+                    }
+                    .price {
+                        margin-top:10px;
+                        color:$point;
+                        font-size:22px;
+                        line-height:30px;
+                        font-weight:700;
+                    }
+                    .options {
+                        font-size:0;
+                        @include mobile {
+                            margin-top:5px;
+                        }
+                        li {
+                            display:inline-block;
+                            vertical-align:top;
+                            margin-top:10px;
+                            margin-right:10px;
+                            padding:4px 10px;
+                            border:1px solid $basic;
+                            border-radius:4px;
+                            @include font;
+                            @include mobile {
+                                margin-top:5px;
+                                margin-right:4px;
+                            }
+                        }
+                    }
+                    .more {
+                        margin-top:15px;
+                        li {
+                            margin-top:4px;
+                            color:$cont;
+                            @include font;
+                            word-break:keep-all;
+                        }
+                    }
+                }
+                .btn {
+                    position:absolute;
+                    bottom:24px;
+                    right:40px;
+                    @include tablet {
+                        position:relative;
+                        bottom:auto;
+                        right:auto;
+                        margin-top:20px;
+                        margin-left:290px;
+                    }
+                    @include mobile {
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+    }
+    .dl-list {
+        margin-top:50px;
+        dt {
+            margin-bottom:10px;
+            @include font-lg;
+            font-weight:700;
+        }
+        dd {
+            margin-top:4px;
+            color:$cont;
+            @include font;
+        }
+    }
+    // 수상/숙박패키지
+    .comx-pkg-cont {
+        > .desc {
+            margin-bottom:45px;
+            @include font-lg;
+            text-align:center;
+            word-break:keep-all;
+            @include mobile {
+                margin-bottom:20px;
+            }
+        }
+        .top {
+            display:flex;
+            align-items:flex-end;
+            justify-content:space-between;
+            @include tablet {
+                flex-wrap:wrap;
+            }
+            .thumb {
+                @include calcs(width, 735px, 1400px);
+                img {
+                    width:100%;
+                }
+                @include tablet {
+                    width:100%;
+                    margin-top:25px;
+                }
+                @include mobile {
+                    margin-top:15px;
+                }
+            }
+            .info {
+                @include calcs(width, 648px, 1400px);
+                padding:50px 40px 30px;
+                border:1px solid $border;
+                @include tablet {
+                    order:-1;
+                    width:100%;
+                    padding:30px 20px;
+                }
+                @include mobile {
+                    padding:20px 12px;
+                }
+                .tit {
+                    @include font-xl;
+                    font-weight:700;
+                }
+                .desc {
+                    margin-top:10px;
+                    @include font;
+                    word-break:keep-all;
+                    &.small {
+                        margin-top:5px;
+                        @include font-sm;
+                        color:$cont;
+                    }
+                }
+                .box {
+                    margin-top:25px;
+                    font-size:0;
+                    @include mobile {
+                        margin-top:15px;
+                    }
+                    .btn {
+                        vertical-align:middle;
+                    }
+                    .call {
+                        display:inline-block;
+                        vertical-align:middle;
+                        margin-left:35px;
+                        color:$point;
+                        @include font;
+                        line-height:28px !important;
+                        &::before {
+                            content:' ';
+                            display:inline-block;
+                            vertical-align:middle;
+                            width:28px;
+                            height:28px;
+                            margin-right:8px;
+                            background:url('/images/icon/icon-call.jpg') center no-repeat;
+                        }
+                        @include mobile {
+                            margin-left:20px;
+                        }
+                    }
+                }
+                .pkg-list {
+                    display:flex;
+                    margin-top:40px;
+                    @include mobile {
+                        display:block;
+                        margin-top:20px;
+                    }
+                    li {
+                        flex:1;
+                        padding:0 10px;
+                        border-left:1px solid $border;
+                        text-align:left;
+                        &:first-child {
+                            border-left:none;
+                        }
+                        @include mobile {
+                            margin-top:15px;
+                            padding:15px 0 0;
+                            border:none;
+                            border-top:1px solid $border;
+                            &:first-child {
+                                margin-top:0;
+                                padding-top:0;
+                                border-top:none;
+                            }
+                        }
+                        .inner {
+                            display:inline-block;
+                            vertical-align:top;
+                            text-align:left;
+                            .name {
+                                @include font-lg;
+                            }
+                            .price {
+                                color:$point;
+                                @include font-lg;
+                                font-weight:700;
+                            }
+                            .options {
+                                margin-top:15px;
+                                font-size:0;
+                                span {
+                                    display:inline-block;
+                                    margin-right:7px;
+                                    padding:4px 6px;
+                                    border:1px solid $basic;
+                                    border-radius:4px;
+                                    @include font;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .img-list {
+            margin-top:25px;
+            font-size:0;
+            white-space:nowrap;
+            @include mobile {
+                margin-top:15px;
+            }
+            li {
+                display:inline-block;
+                vertical-align:top;
+                width:calc((100% - 50px) / 3);
+                margin-left:25px;
+                &:first-child {
+                    margin-left:0;
+                }
+                @include mobile {
+                    width:calc((100% - 30px) / 3);
+                    margin-left:15px;
+                }
+            }
+        }
+    }
+}

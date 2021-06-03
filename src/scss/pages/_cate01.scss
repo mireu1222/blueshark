@@ -1,0 +1,344 @@
+/* 블루샤크 */
+.container.cate01 {
+    // 소개
+    .introduce {
+        position:relative;
+        padding-top:480px;
+        background-image:url('/images/img/img-sub0101.jpg');
+        background-position:right 0;
+        background-repeat:no-repeat;
+        background-size:auto;
+        @include tablet {
+            padding-top:330px;
+            background-size:70% auto;
+        }
+        @include mobile {
+            background-size:100%;
+            @include calcs(padding-top, 500px, 850px);
+        }
+        .hello {
+            position:absolute;
+            top:95px;
+            left:0;
+            padding:10px 40px;
+            font-size:40px;
+            line-height:50px;
+            font-weight:300;
+            letter-spacing:-2px;
+            word-break:keep-all;
+            @include tablet {
+                max-width:460px;
+            }
+            @include mobile {
+                position:relative;
+                top:auto;
+                left:auto;
+                max-width:100%;
+                margin-top:20px;
+                margin-bottom:20px;
+                padding:0 20px;
+                font-size:30px;
+                line-height:36px;
+                text-align:center;
+            }
+            &::before,
+            &::after {
+                content:' ';
+                position:absolute;
+                width:26px;
+                height:21px;
+                background:url('/images/icon/icon-qt.png') no-repeat;
+            }
+            &::before {
+                top:0;
+                left:0;
+            }
+            &::after {
+                bottom:50px;
+                right:0;
+                transform:rotate(180deg);
+                @include mobile {
+                    bottom:0;
+                }
+            }
+        }
+        h4.tit {
+            &::before {
+                content:' ';
+                display:block;
+                width:2px;
+                height:140px;
+                margin:0 auto 30px;
+                background:$point;
+                @include mobile {
+                    height:80px;
+                    margin-bottom:20px;
+                }
+            }
+            text-align:center;
+            font-size:28px;
+            line-height:1;
+            font-weight:700;
+            @include mobile {
+                font-size:22px;
+            }
+        }
+        .list-wrap {
+            margin-top:65px;
+            overflow:hidden;
+            @include mobile {
+                margin-top:20px;
+            }
+            .lists {
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                @include calcs(margin-left, -30px, 1400px);
+                @include calcs(margin-top, -40px, 1400px);
+                @include mobile {
+                    margin-left:0;
+                    margin-top:0;
+                }
+                li {
+                    position:relative;
+                    width:25%;
+                    @include calcs(margin-top, 40px, 1430px);
+                    @include calcs(padding-left, 30px, 1430px);
+                    padding-top:12px;
+                    @include mobile {
+                        width:100%;
+                        margin-top:15px;
+                        padding-left:0;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                    @for $i from 1 through 7 {
+                        &:nth-child(#{$i}) .inner::before {
+                            content:'0#{$i}';
+                        }
+                    }
+                    .inner {
+                        position:relative;
+                        height:100%;
+                        padding:70px 20px 45px;
+                        border:1px solid $blur;
+                        text-align:center;
+                        @include mobile {
+                            padding:44px 20px 20px;
+                        }
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            top:-12px;
+                            left:50%;
+                            width:48px;
+                            height:48px;
+                            transform:translateX(-50%);
+                            background:$point;
+                            color:$white;
+                            text-align:center;
+                            font-size:25px;
+                            line-height:48px;
+                            @include mobile {
+                                width:36px;
+                                height:36px;
+                                font-size:20px;
+                                line-height:36px;
+                            }
+                        }
+                        .tit {
+                            position:relative;
+                            margin-bottom:30px;
+                            padding-bottom:30px;
+                            font-size:22px;
+                            line-height:28px;
+                            font-weight:700;
+                            word-break:keep-all;
+                            &::after {
+                                content:' ';
+                                position:absolute;
+                                left:50%;
+                                bottom:0;
+                                width:40px;
+                                height:2px;
+                                margin-left:-20px;
+                                background:$point;
+                            }
+                            @include mobile {
+                                margin-bottom:20px;
+                                padding-bottom:20px;
+                                font-size:18px;
+                                line-height:1;
+                                font-weight:900;
+                            }
+                        }
+                        .desc {
+                            color:$cont;
+                            @include font-lg;
+                            word-break:keep-all;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 상품구매
+    .product-list-wrap {
+        overflow:hidden;
+        .lists {
+            display:flex;
+            flex-wrap:wrap;
+            @include calcs(margin-top, -60px, 1400px);
+            @include calcs(margin-left, -30px, 1400px);
+            @include mobile {
+                margin-top:-15px;
+                margin-left:-10px;
+            }
+            li {
+                width:25%;
+                @include calcs(margin-top, 60px, 1430px);
+                @include calcs(padding-left, 30px, 1430px);
+                @include mobile {
+                    width:50%;
+                    margin-top:15px;
+                    padding-left:10px;
+                }
+            }
+            .inner {
+                display:block;
+                position:relative;
+                height:100%;
+                border:1px solid $border;
+                border-radius:10px;
+                overflow:hidden;
+                .thumb {
+                    display:block;
+                    @include calcs(padding-top, 290px, 330px);
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .info {
+                    padding:20px;
+                    padding-bottom:55px;
+                    @include mobile {
+                        padding:12px;
+                        padding-bottom:40px;
+                    }
+                    .name {
+                        @include font-lg;
+                        font-weight:700;
+                    }
+                    .desc {
+                        min-height:40px;
+                        margin-top:10px;
+                        @include font-sm;
+                        color:$cont;
+                    }
+                    .price {
+                        position:absolute;
+                        left:20px;
+                        bottom:20px;
+                        color:$point;
+                        @include font-lg;
+                        font-weight:700;
+                        @include mobile {
+                            left:12px;
+                            bottom:12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 오시는길
+    .map-wrap {
+        margin-bottom:30px;
+        .root_daum_roughmap {
+            width:100% !important;
+            .map_border {
+                display:none;
+            }
+            .wrap_controllers {
+                display:none !important;
+            }
+            @include mobile {
+                .wrap_map {
+                    height:300px !important;
+                }
+            }
+        }
+    }
+    .tbl-wrap {
+        .table.row-tbl {
+            tbody {
+                tr {
+                    th, 
+                    td {
+                        @include font-lg;
+                    }
+                }
+            }
+        }
+    }
+    .howto {
+        padding:50px 0;
+        @include mobile {
+            padding:20px 0;
+        }
+        dl {
+            margin-bottom:25px;
+            @include clearfix;
+            @include mobile {
+                margin-bottom:15px;
+            }
+            &:nth-child(1) dt::before {
+                background-image:url('/images/icon/icon-vehicle01.png');
+            }
+            &:nth-child(2) dt::before {
+                background-image:url('/images/icon/icon-vehicle02.png');
+            }
+            dt {
+                float:left;
+                width:130px;
+                @include font-lg;
+                line-height:32px !important;
+                font-weight:700;
+                @include mobile {
+                    float:none;
+                    width:100%;
+                    margin-bottom:5px;
+                }
+                &::before {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:32px;
+                    height:32px;
+                    margin-right:12px;
+                    border-radius:50%;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                    background-size:100%;
+                }
+            }
+            dd {
+                margin-left:130px;
+                @include font-lg;
+                line-height:32px;
+                @include mobile {
+                    margin-left:0;
+                }
+            }
+        }
+        p {
+            padding-left:130px;
+            @include font-lg;
+            font-weight:700;
+            @include mobile {
+                padding-left:0;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate07 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate07">
+            @@include('./layout/page-title.html', {
+                cate07 : true,
+                noTab : true,
+                title : '공지사항'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/list-filter.html')
+                @@include('./modules/notice-tbl.html', {
+                    total : true,
+                    caption : '공지사항',
+                    notice : true,
+                    page : 'sub07_view'
+                })
+
+                <!-- pagination -->
+                @@include('./modules/pagination.html')
+                <!-- // pagination -->
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <!-- video modal -->
+    <div id="video" class="video-modal-area" style="display:none;">
+        <div class="video-area">
+            <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+        <div class="video-info">
+            <p class="tit">&nbsp;</p>
+            <p class="desc">&nbsp;</p>
+        </div>
+        <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+    </div>
+    <!-- // video modal -->
+</body>
+<script>
+    videoModal();
+</script>
+</html>

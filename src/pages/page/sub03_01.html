@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : true,
+                sub0301 : true,
+                title : '숙박안내 및 가격'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                <ul class="rooms-list">
+                    <li>
+                        <div class="inner">
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-1.jpg" alt=""></span>
+                            <div class="info">
+                                <p class="tit">프라이빗 독채</p>
+                                <p class="desc">블루샤크는 깨끗하고 가성비 좋은 펜션부터 고급 풀빌라까지 다양한 펜션을 보유하고 있습니다.</p>
+                                <p class="price">60,000원~</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-2.jpg" alt=""></span>
+                            <div class="info">
+                                <p class="tit">고급 풀빌라</p>
+                                <p class="desc">블루샤크는 깨끗하고 가성비 좋은 펜션부터 고급 풀빌라까지 다양한 펜션을 보유하고 있습니다.</p>
+                                <p class="price">60,000원~</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-3.jpg" alt=""></span>
+                            <div class="info">
+                                <p class="tit">펜션</p>
+                                <p class="desc">블루샤크는 깨끗하고 가성비 좋은 펜션부터 고급 풀빌라까지 다양한 펜션을 보유하고 있습니다.</p>
+                                <p class="price">60,000원~</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="thumb" aria-hidden="true"><img src="/images/img/img-sub0301-4.jpg" alt=""></span>
+                            <div class="info">
+                                <p class="tit">단체룸</p>
+                                <p class="desc">블루샤크는 깨끗하고 가성비 좋은 펜션부터 고급 풀빌라까지 다양한 펜션을 보유하고 있습니다.</p>
+                                <p class="price">60,000원~</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0401 : true,
+                title : '엘리시안 강촌'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tour-list.html', {
+                    type2 : true,
+                    thumb : 'img-sub0401-1',
+                    eyebrow : '엘리시안 강촌',
+                    title : '블루샤크의 이용고객<br>혜택',
+                    desc : '엘리시안강촌 할인권 제공',
+                    img : 'img-sub0401-',
+                    imgs : 3
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

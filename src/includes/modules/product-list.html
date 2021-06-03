@@ -1,0 +1,16 @@
+<div class="product-list-wrap">
+    <ul class="lists">
+        @@for(var i=0; i < list.length; i++) {
+        <li>
+            <span class="inner">
+                <span class="thumb" style="background-image:url('/images/@thumb.jpg')" aria-hidden="true"></span>
+                <div class="info">
+                    <p class="name"><span class="blind">상품명</span>`+list[i].name+`</p>
+                    <p class="desc"><span class="blind">상품설명</span>`+list[i].desc+`</p>
+                    <p class="price"><span class="blind">상품가격</span>999,999원</p>
+                </div>
+            </span>
+        </li>
+        }
+    </ul>
+</div>

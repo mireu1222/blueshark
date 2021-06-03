@@ -1,0 +1,212 @@
+/* list */
+// thumb list 
+.thumb-list-wrap {
+    overflow:hidden;
+    .lists {
+        display:flex;
+        flex-wrap:wrap;
+        @include calcs(margin-top, -60px, 1400px);
+        @include calcs(margin-left, -30px, 1400px);
+        .items {
+            width:25%;
+            @include calcs(margin-top, 60px, 1430px);
+            @include calcs(padding-left, 30px, 1430px);
+            @include mobile {
+                width:33.33%;
+            }
+            @include mob {
+                width:50%;
+            }
+            .thumb {
+                display:block;
+                width:100%;
+                height:0;
+                @include calcs(padding-top, 330px, 328px);
+                border-radius:10px;
+                overflow:hidden;
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-position:center;
+                overflow:hidden;
+                &.video {
+                    @include calcs(padding-top, 9px, 16px);
+                }
+            }
+            .info {
+                margin-top:20px;
+                .tit {
+                    display:block;
+                    @include font-xl;
+                    font-weight:700;
+                    @include textEllipsis;
+                    @include pc {
+                        &:hover, 
+                        &:active {
+                            text-decoration:underline;
+                        }
+                    }
+                }
+                .desc {
+                    margin-top:10px;
+                    @include font;
+                    color:$gray;
+                    @include textEllipsisClamp(2);
+                }
+                .src {
+                    display:none !important;
+                }
+            }
+        }
+    }
+}
+
+// masonry list
+.masonry-list-wrap {
+    overflow:hidden;
+    .item-wrap {
+        @include calcs(margin-top, -60px, 1400px);
+        @include calcs(margin-left, -30px, 1400px);
+        @include clearfix;
+        .items {
+            float:left;
+            width:25%;
+            @include calcs(margin-top, 60px, 1430px);
+            @include calcs(padding-left, 30px, 1430px);
+            @include mobile {
+                width:33.33%;
+            }
+            @include mob {
+                width:50%;
+            }
+            .thumb {
+                position:relative;
+                display:block;
+                margin-bottom:30px;
+                border-radius:10px;
+                overflow:hidden;
+                img {
+                    width:100%;
+                }
+            }
+            .info {
+                position:relative;
+                .tit {
+                    display:block;
+                    @include font-lg;
+                    @include textEllipsisClamp(2);
+                    font-weight:700;
+                    word-break:keep-all;
+                    @include pc {
+                        &:hover,
+                        &:active {
+                            text-decoration:underline;
+                        }
+                    }
+                }
+                .desc {
+                    margin-top:10px;
+                    color:$cont;
+                    @include font;
+                    @include textEllipsisClamp(5);
+                    word-break:keep-all;
+                }
+                .date {
+                    margin-top:15px;
+                    color:$gray;
+                    @include font-sm;
+                }
+                .src {
+                    display:none !important;
+                }
+            }
+        }
+    }
+}
+
+// input list
+.slt-lists {
+    font-size:0;
+    li {
+        display:inline-block;
+        vertical-align:top;
+    }
+    &.auto {
+        li {
+            margin-right:40px;
+            &:last-child {
+                margin-left:0;
+            }
+            @include tablet {
+                display:block;
+                margin-right:0;
+                margin-top:5px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+        }
+    }
+}
+
+// sns icon list
+.sns-login-list {
+    font-size:0;
+    li {
+        display:inline-block;
+        vertical-align:top;
+        margin-left:5px;
+        &:first-child {
+            margin-left:0;
+        }
+        a {
+            display:block;
+            width:46px;
+            height:46px;
+            background-image:url('/images/icon/icon-snslogin.png');
+            background-repeat:no-repeat;
+            &.sns01 {
+                background-position:0 0;
+            }
+            &.sns02 {
+                background-position:right 0;
+            }
+            &.off {
+                background-position-y:bottom;
+            }
+        }
+    }
+}
+
+// bullet list
+.bullet-list {
+    color:$basic;
+    li {
+        padding-left:14px;
+        color:inherit;
+        @include font;
+        &::before {
+            content:'-';
+            display:inline-block;
+            vertical-align:top;
+            width:14px;
+            margin-left:-14px;
+        }
+        sup {
+            display:inline-block;
+            vertical-align:top;
+            font-size:0.8em;
+            line-height:1;
+        }
+    }
+    &.dot {
+        li {
+            margin-top:5px;
+            &:first-child {
+                margin-top:0;
+            }
+            &::before {
+                content:'·';
+            }  
+        }
+    }
+}

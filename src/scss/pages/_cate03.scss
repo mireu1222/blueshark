@@ -1,0 +1,55 @@
+/* 숙박 */
+.container.cate03 {
+    // 숙박안내 및 가격
+    .rooms-list {
+        display:flex;
+        justify-content:space-between;
+        @include tablet {
+            flex-wrap:wrap;
+        }
+        li {
+            @include calcs(width, 328px, 1400px);
+            @include tablet {
+                width:calc((100% - 20px) / 2);
+                &:nth-child(2) ~ li {
+                    margin-top:20px;
+                }
+            }
+            @include mobile {
+                width:calc((100% - 10px) / 2);
+                &:nth-child(2) ~ li {
+                    margin-top:10px;
+                }
+            }
+            .inner {
+                border-radius:10px;
+                overflow:hidden;
+                box-shadow: 3px 5px 12px 2px rgba(221, 221, 221, 0.75);
+                .thumb {
+                    display:block;
+                    img {
+                        width:100%;
+                    }
+                }
+                .info {
+                    padding:20px;
+                    .tit {
+                        @include font-lg;
+                        font-weight:700;
+                    }
+                    .desc {
+                        margin-top:10px;
+                        @include font-sm;
+                        color:$cont;
+                    }
+                    .price {
+                        margin-top:10px;
+                        color:$point;
+                        @include font-lg;
+                        font-weight:700;
+                    }
+                }
+            }
+        }
+    }
+}

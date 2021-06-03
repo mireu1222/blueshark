@@ -1,0 +1,109 @@
+/* 제휴관광지 */
+.container.cate04 {
+    .tour-list-wrap {
+        &.type2 {
+            .intro {
+                position:relative;
+                padding-top:245px;
+                @include calcs(padding-left, 770px, 1400px);
+                @include tablet {
+                    @include calcs(padding-top, 245px, 1400px);
+                }
+                @include mobile {
+                    padding:0;
+                }
+                .thumb {
+                    display:block;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    width:auto;
+                    max-width:80%;
+                    @include mobile {
+                        position:relative;
+                        left:auto;
+                        top:auto;
+                        width:100%;
+                        max-width:100%;
+                    }
+                }
+                .info {
+                    position:relative;
+                    margin-left:0;
+                    width:100%;
+                    max-width:420px;
+                    padding:35px 35px 70px;
+                    box-shadow: 3px 4px 5px 0px rgba(221, 221, 221, 0.75);
+                    background:#fff;
+                    @include mobile {
+                        max-width:80%;
+                        margin-left:auto;
+                        margin-top:-80px;
+                        padding:20px;
+                    }
+                }
+            }
+        }
+        .intro {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            @include mobile {
+                display:block;
+            }
+            .thumb {
+                display:block;
+                @include calcs(width, 635px, 1400px);
+                text-align:center;
+                @include mobile {
+                    width:100%;
+                }
+            }
+            .info {
+                align-self:flex-start;
+                @include calcs(width, 730px, 1400px);
+                @include calcs(padding-top, 50px, 1400px);
+                @include calcs(padding-bottom, 50px, 1400px);
+                @include tablet {
+                    padding:0;
+                }
+                @include mobile {
+                    width:100%;
+                    margin-top:20px;
+                }
+                .eyebrow {
+                    margin-bottom:10px;
+                    color:$point;
+                    @include font-lg;
+                    font-weight:700;
+                    @include mobile {
+                        margin-bottom:5px;
+                    }
+                }
+                .tit {
+                    @include font-title;
+                    font-weight:700;
+                }
+                .desc {
+                    margin-top:25px;
+                    @include font;
+                    word-break:keep-all;
+                    @include mobile {
+                        margin-top:10px;
+                    }
+                }
+            }
+        }
+        .img-list {
+            display:flex;
+            margin-top:35px;
+            justify-content:space-between;
+            @include mobile {
+                margin-top:20px;
+            }
+            li {
+                @include calcs(width, 452px, 1400px);
+            }
+        }
+    }
+}

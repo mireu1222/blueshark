@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate03 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : true,
+                sub0304 : true,
+                title : '풀빌라'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tab-cont.html', {
+                    type2 : true,
+                    img1 : '/img/img-sub0304-1',
+                    img2 : '/img/img-sub0304-2',
+                    name : '풀빌라',
+                    title : '블루샤크의 풀빌라를<br>즐겨보세요',
+                    desc : '가성비 좋은 펜션부터 고급 풀빌라까지!'
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    imgSwitch();
+    minHeight();
+    const imgSwiper = new Swiper('.img-slider .swiper-container', {
+        loop : true,
+        slidesPerView : 2,
+        slidesPerGroup : 1,
+        spaceBetween : 16,
+        navigation : {
+            nextEl : '.img-slider .swiper-btn.next',
+            prevEl : '.img-slider .swiper-btn.prev',
+        },
+        breakpoints : {
+            768 : {
+                spaceBetween : 10
+            }
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate01 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : true,
+                sub0103 : true,
+                title : '가격/상품/구매'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                <!-- 상품리스트 -->
+                @@include('./modules/product-list.html', {
+                    list : [
+                        {
+                            name : '제트보트',
+                            desc : '상어 제트보트로 물위를 질주해보세요!'                            
+                        }, {
+                            name : '상품명이 들어감',
+                            desc : '상품 상세설명이 들어감 상품 상세설명이 들어감 상품 상세설명이 들어감 상품 상세설명이 들어감 상품 상세설명이 들어감'                            
+                        }, {
+                            name : '상품명이 들어감',
+                            desc : '상품 상세설명이 들어감 상품 상세설명이 들어감'                            
+                        }, {
+                            name : '상품명이 들어감',
+                            desc : '상품 상세설명이 들어감 상품 상세설명이 들어감'                            
+                        }, {
+                            name : '상품명이 들어감',
+                            desc : '상품 상세설명이 들어감 상품 상세설명이 들어감'                            
+                        }, {
+                            name : '상품명이 들어감',
+                            desc : '상품 상세설명이 들어감 상품 상세설명이 들어감 상품 상세설명이 들어감'                            
+                        }
+                    ]
+                })
+                <!-- // 상품리스트 -->
+
+                <!-- pagination -->
+                @@include('./modules/pagination.html')
+                <!-- // pagination -->
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

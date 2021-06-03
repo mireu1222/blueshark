@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate02 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : true,
+                sub0202 : true,
+                title : '수상패키지'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/sub-tab.html', {
+                    href : 'cont',
+                    list : [
+                        '놀이기구 패키지', '제트보트 패키지', '모터보트 투어', '수상스키/웨이크보드'
+                    ]
+                })
+
+                <div class="tab-contents">
+                    <div class="tit-wrap">
+                        <h4 class="tit">놀이기구 패키지</h4>
+                        <p class="desc">모든 패키지 이용시 무료입장, 썬베드, 온수샤워장, 수건, 깨끗한 화장실, 넓은 주차장 무료제공 됩니다!</p>
+                    </div>
+
+                    <div class="pkg-list-wrap" data-id="cont1">
+                        <ul class="lists">
+                            @@loop('./modules/tab-cont2.html', [
+                                {
+                                    img : 'img-thumb0202-1',
+                                    num : '01',
+                                    price : '30,000',
+                                    options : [
+                                        '놀이기구 3종', '초대형 워터파크 종일권', '블롭점프', '워터슬라이드', '카약'
+                                    ],
+                                    more : [
+                                        '하루종일 무제한 - 1인기준',
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-2',
+                                    num : '02',
+                                    price : '38,000',
+                                    options : [
+                                        '놀이기구 4종', '초대형 워터파크 종일권', '블롭점프', '워터슬라이드', '카약'
+                                    ],
+                                    more : [
+                                        '하루종일 무제한 - 1인기준',
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-3',
+                                    num : '03',
+                                    price : '45,000',
+                                    options : [
+                                        '놀이기구 5종', '초대형 워터파크 종일권', '블롭점프', '워터슬라이드', '카약'
+                                    ],
+                                    more : [
+                                        '하루종일 무제한 - 1인기준',
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-4',
+                                    num : '04',
+                                    price : '20,000',
+                                    options : [
+                                        '오전 놀이기구 무제한 이용권(09:30~12:00)'
+                                    ],
+                                    more : [
+                                        '9:30부터 12:00까지 이용가능 - 1인기준', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-5',
+                                    num : '05',
+                                    price : '35,000',
+                                    options : [
+                                        '4시간 놀이기구 무제한 이용권'
+                                    ],
+                                    more : [
+                                        '이용시작 시간부터 4시간 이용가능 - 1인기준', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-6',
+                                    num : '06',
+                                    price : '50,000',
+                                    options : [
+                                        '종일 무제한 이용권 + 제트보트 1회'
+                                    ],
+                                    more : [
+                                        '종일 무제한 이용권 - 1인기준', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }
+                            ])                            
+                        </ul>
+                    </div>
+
+                    <div class="pkg-list-wrap" data-id="cont2">
+                        <ul class="lists">
+                            @@loop('./modules/tab-cont2.html', [
+                                {
+                                    img : 'img-thumb0202-7',
+                                    num : '01',
+                                    price : '40,000',
+                                    options : [
+                                        '놀이기구 3종 패키지', '제트보트'
+                                    ],
+                                    more : [
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-8',
+                                    num : '02',
+                                    price : '48,000',
+                                    options : [
+                                        '놀이기구 4종 패키지', '제트보트'
+                                    ],
+                                    more : [
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-9',
+                                    num : '03',
+                                    price : '55,000',
+                                    options : [
+                                        '놀이기구 5종 패키지', '제트보트'
+                                    ],
+                                    more : [
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-10',
+                                    num : '04',
+                                    price : '20,000',
+                                    options : [
+                                        '제트보트 탑승권'
+                                    ],
+                                    more : [
+                                        '기구 개당 추가요금 10,000원', 
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                },
+                            ])                            
+                        </ul>
+                    </div>
+
+                    <div class="pkg-list-wrap" data-id="cont3">
+                        <ul class="lists">
+                            @@loop('./modules/tab-cont2.html', [
+                                {
+                                    img : 'img-thumb0202-11',
+                                    num : '01',
+                                    price : '80,000',
+                                    options : [
+                                        '남이섬 모터보트 투어'
+                                    ],
+                                    more : [
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-12',
+                                    num : '02',
+                                    price : '60,000',
+                                    options : [
+                                        '자라섬 모터보트 투어'
+                                    ],
+                                    more : [
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, 
+                            ])                            
+                        </ul>
+                    </div>
+
+                    <div class="pkg-list-wrap" data-id="cont4">
+                        <ul class="lists">
+                            @@loop('./modules/tab-cont2.html', [
+                                {
+                                    img : 'img-thumb0202-13',
+                                    num : '01',
+                                    price : '50,000',
+                                    options : [
+                                        '지상 1회', '수상 1회', '놀이기구 1회', '초대형 워터파크 종일권', '블롭점프', '워터슬라이드', '카약'
+                                    ],
+                                    more : [
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, {
+                                    img : 'img-thumb0202-14',
+                                    num : '02',
+                                    price : '25,000',
+                                    options : [
+                                        '라이딩 1회'
+                                    ],
+                                    more : [
+                                        '모든 패키지 입장권 테이블 레저보험 포함입니다.'
+                                    ]
+                                }, 
+                            ])                            
+                        </ul>
+                    </div>
+
+                    <dl class="dl-list">
+                        <dt>환불규정</dt>
+                        <dd>모든계약은 결제완료 후 유효합니다.</dd>
+                        <dd>사용예정일 7일전까지 100% 환불, 사용예정일 전날까지 50% 환불, 당일은 취소불가합니다.</dd>
+                        <dd>수상레저 기구 및 설치시설은 현장 진행상황 및 안전상에 이유로 이용이 제한될 수 있습니다.</dd>
+                        <dd>비오는날도 영업합니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+<script>
+    uiTab();
+    $('[data-evt="tab"] > li:first-child a').click();
+</script>
+</html>

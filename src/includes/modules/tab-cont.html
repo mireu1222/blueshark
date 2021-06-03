@@ -1,0 +1,36 @@
+@@if(!context.type2){
+<div class="tab-contents" data-id="@@id">
+}
+    <div class="product-intro@@if(context.type2){ type2}">
+        <div class="img-view" data-toggle="imgSwitch" style="background-image:url('/images/img/@@img-1.jpg');"></div>
+        <div class="intro">
+            <p class="eyebrow">@@name</p>
+            <p class="tit">@@title</p>
+            <p class="desc">@@desc</p>
+            @@if(!context.type2){
+            <a href="https://talk.naver.com/ct/wc4mk2?frm=mnmb&frm=nmb_detail" class="btn btn-border-point" target="_blank">예약하기</a>
+            }
+        </div>
+        <div class="img-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <span class="thumb active" data-toggle="imgView" style="background-image:url(/images/img/@@img-1.jpg);"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="thumb" data-toggle="imgView" style="background-image:url('/images/img/@@img-2.jpg');"></span>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="thumb" data-toggle="imgView" style="background-image:url('/images/img/@@img-3.jpg');"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-controls">
+                <div class="swiper-btn prev"><span class="blind">PREV</span></div>
+                <div class="swiper-btn next"><span class="blind">NEXT</span></div>
+            </div>
+        </div>
+    </div>
+@@if(!context.type2){
+</div>
+}

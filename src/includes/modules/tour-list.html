@@ -1,0 +1,17 @@
+<div class="tour-list-wrap@@if(context.type2){ type2}">
+    <div class="intro">
+        <span class="thumb">
+            <img src="/images/img/@@thumb.jpg" alt="">
+        </span>
+        <div class="info">
+            <p class="eyebrow">@@eyebrow</p>
+            <p class="tit">@@title</p>
+            <p class="desc">@@desc</p>
+        </div>
+    </div>
+    <ul class="img-list">
+        @@for(var i=0; i < imgs; i++){
+        <li><img src="/images/img/@@img`+[i+2]+`.jpg" alt=""></li>
+        }
+    </ul>
+</div>

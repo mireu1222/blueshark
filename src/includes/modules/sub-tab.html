@@ -1,0 +1,10 @@
+<div class="sub-tab-wrap@@if(context.collapse){ collapse}">
+    <ul id="collapse-list" class="tabs" data-evt="tab">
+        @@for(var i=0; i < list.length; i++) {
+        <li><a href="@@href`+[i+1]+`">`+list[i]+`</a></li>
+        }
+    </ul>
+    @@if(context.collapse){
+    <button type="button" data-toggle="collapse" data-target="#collapse-list" aria-expanded="false" aria-controls="collapse-list" data-opentext="탭메뉴 더보기" data-closetext="탭메뉴 닫기"><span class="blind">탭메뉴 더보기</span></button>
+    }
+</div>

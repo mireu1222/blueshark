@@ -1,0 +1,67 @@
+<!-- sub visual -->
+<div class="sub-visual">
+    @@if(context.cate01){<h2 class="title">블루샤크</h2>}
+    @@if(context.cate02){<h2 class="title">수상레저</h2>}
+    @@if(context.cate03){<h2 class="title">숙박</h2>}
+    @@if(context.cate04){<h2 class="title">제휴관광지</h2>}
+    @@if(context.cate05){<h2 class="title">먹거리</h2>}
+    @@if(context.cate06){<h2 class="title">갤러리</h2>}
+    @@if(context.cate07){<h2 class="title">공지사항</h2>}
+</div>
+<!-- // sub visual -->
+@@if(!context.noTab){
+<!-- sub page tab -->
+<div class="page-tab-wrap">
+    <div class="scroll">
+        @@if(context.cate01){
+        <ul class="tabs">
+            <li@@if(context.sub0101){ class="active"}><a href="/page/sub01_01.html">회사소개</a></li>
+            <li@@if(context.sub0102){ class="active"}><a href="/page/sub01_02.html">SNS</a></li>
+            <li@@if(context.sub0103){ class="active"}><a href="/page/sub01_03.html">가격/상품/구매</a></li>
+            <li@@if(context.sub0104){ class="active"}><a href="/page/sub01_04.html">오시는길</a></li>
+        </ul>
+        }
+        @@if(context.cate02){
+        <ul class="tabs">
+            <li@@if(context.sub0201){ class="active"}><a href="/page/sub02_01.html">상품소개</a></li>
+            <li@@if(context.sub0202){ class="active"}><a href="/page/sub02_02.html">수상패키지</a></li>
+            <li@@if(context.sub0203){ class="active"}><a href="/page/sub02_03.html">수상+숙박패키지</a></li>
+        </ul>
+        }
+        @@if(context.cate03){
+        <ul class="tabs">
+            <li@@if(context.sub0301){ class="active"}><a href="/page/sub03_01.html">숙박안내 및 가격</a></li>
+            <li@@if(context.sub0302){ class="active"}><a href="/page/sub03_02.html">리조트 엘리시안강촌</a></li>
+            <li@@if(context.sub0303){ class="active"}><a href="/page/sub03_03.html">펜션</a></li>
+            <li@@if(context.sub0304){ class="active"}><a href="/page/sub03_04.html">풀빌라</a></li>
+        </ul>
+        }
+        @@if(context.cate04){
+        <ul class="tabs">
+            <li@@if(context.sub0401){ class="active"}><a href="/page/sub04_01.html">엘리시안강촌</a></li>
+            <li@@if(context.sub0402){ class="active"}><a href="/page/sub04_02.html">가평레일바이크</a></li>
+            <li@@if(context.sub0403){ class="active"}><a href="/page/sub04_03.html">자라섬</a></li>
+            <li@@if(context.sub0404){ class="active"}><a href="/page/sub04_04.html">남이섬</a></li>
+            <li@@if(context.sub0405){ class="active"}><a href="/page/sub04_05.html">제이드가든</a></li>
+        </ul>
+        }
+        @@if(context.cate05){
+        <ul class="tabs">
+            <li@@if(context.sub0501){ class="active"}><a href="/page/sub05_01.html">신제품01</a></li>
+            <li@@if(context.sub0502){ class="active"}><a href="/page/sub05_02.html">신제품02</a></li>
+        </ul>
+        }
+        @@if(context.cate06){
+        <ul class="tabs">
+            <li@@if(context.sub0601){ class="active"}><a href="/page/sub06_01.html">사진</a></li>
+            <li@@if(context.sub0602){ class="active"}><a href="/page/sub06_02.html">동영상</a></li>
+            <li><a href="https://www.youtube.com/channel/UCzfkcNzjk49F2f3AQGtC5TA" target="_blank">유튜브</a></li>
+        </ul>
+        }
+    </div>
+</div>
+<!-- // sub page tab -->
+<!-- page title -->
+<h3 class="page-title"><span>@@title</span></h3>
+<!-- // page title -->
+}

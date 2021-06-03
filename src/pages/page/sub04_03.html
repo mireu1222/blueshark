@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            cate04 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : true,
+                sub0403 : true,
+                title : '자라섬'
+            })
+
+            <!-- contents -->
+            <div class="contents-wrap">
+                @@include('./modules/tour-list.html', {
+                    thumb : 'img-sub0403-1',
+                    eyebrow : '제휴관광지',
+                    title : '자라섬',
+                    desc : '자라섬은 북한강에 떠 있는 하나의 섬으로 약 20여만평의 크기입니다. 큰 미류나무들과 버들가지 등 자연 수목원이 있으며 강가 수변도로와 해바라기 광장, 들꽃광장, 코스모스 등 수 많은 꽃과 나무로 일어진 자연 휴양지 입니다. 캠핑으로도 유명하고 2004년부터 열리고 있는 자라섬국제재즈페스티벌이 열리는 곳으로도 알려져있습니다. 자라섬은 우리에게 인간의 때묻지 않은 순수함과 따뜻함을 전해주고 있으며 낭만과 사색의 공간을 줄 수 있을 만큼 여유롭고 자유분방한 섬입니다.',
+                    img : 'img-sub0403-',
+                    imgs : 3
+                })
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

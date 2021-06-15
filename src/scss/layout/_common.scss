@@ -175,6 +175,10 @@ body {
             padding-top:30px;
             padding-bottom:70px;
         }
+        &.full {
+            max-width:none;
+            padding:70px 0 0;
+        }
     }
 }
 

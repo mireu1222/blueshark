@@ -257,17 +257,18 @@
                         a.inner {
                             transform:scale(1);
                             opacity:1;
-                            @include pc {
-                                &:hover {
-                                    &::before,
-                                    .cont {
-                                        opacity:1;
-                                    }
-                                }
+                            &::before,
+                            .cont {
+                                opacity:1;
                             }
-                            @include tablet {
-                                &::before,
-                                .cont {
+                            .cont {
+                                .pkg-desc {
+                                    opacity:1;
+                                }
+                                .pkg-price {
+                                    opacity:1;
+                                }
+                                .pkg-sale-price {
                                     opacity:1;
                                 }
                             }
@@ -319,7 +320,6 @@
                             transform:translateY(-50%);
                             color:$white;
                             text-align:center;
-                            opacity:0;
                             transition:all 0.2s ease-in-out;
                             .pkg-name {
                                 position:relative;
@@ -340,8 +340,10 @@
                             }
                             .pkg-desc {
                                 @include font-lg;
+                                opacity:0;
                             }
                             .pkg-price {
+                                opacity:0;
                                 span {
                                     display:inline-block;
                                     position:relative;
@@ -366,6 +368,7 @@
                                 line-height:28px;
                                 font-weight:700;
                                 color:$point;
+                                opacity:0;
                             }
                         }
                     }
@@ -786,6 +789,30 @@
                 &.pst6 {
                     bottom:0;
                     right:0;
+                }
+            }
+        }
+        .video-lists {
+            overflow:hidden;
+            ul.lists {
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:space-between;
+                li {
+                    @include calcs(width, 450px, 1400px);
+                    @include calcs(margin-top, 25px, 1400px);
+                    .video {
+                        position:relative;
+                        @include calcs(padding-top, 9px, 16px);
+                        overflow:hidden;
+                        iframe {
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
                 }
             }
         }

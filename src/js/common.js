@@ -1,7 +1,6 @@
 $(function(){
     noImg(); // no img
 
-    headerScroll(); // header scroll event
     gnbSubdepth(); // header hover event(pc)
     $('header .btn-menu-all').click(function(){ // gnb open/close event(mobile)
         $(this).hasClass('open') ? gnbClose() : gnbOpen();

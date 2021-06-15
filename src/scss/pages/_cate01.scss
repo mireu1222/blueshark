@@ -3,18 +3,22 @@
     // 소개
     .introduce {
         position:relative;
-        padding-top:480px;
-        background-image:url('/images/img/img-sub0101.jpg');
-        background-position:right 0;
-        background-repeat:no-repeat;
-        background-size:auto;
-        @include tablet {
-            padding-top:330px;
-            background-size:70% auto;
-        }
-        @include mobile {
-            background-size:100%;
-            @include calcs(padding-top, 500px, 850px);
+        .area {
+            position:relative;
+            @include contArea;
+            padding-top:480px;
+            background-image:url('/images/img/img-sub0101.jpg');
+            background-position:right 0;
+            background-repeat:no-repeat;
+            background-size:auto;
+            @include tablet {
+                padding-top:330px;
+                background-size:70% auto;
+            }
+            @include mobile {
+                background-size:100%;
+                @include calcs(padding-top, 500px, 850px);
+            }
         }
         .hello {
             position:absolute;
@@ -83,11 +87,21 @@
                 font-size:22px;
             }
         }
+        .bg-area {
+            background:url('/images/bg/bg-sub0101.jpg') center no-repeat;
+            background-size:cover;
+        }
         .list-wrap {
-            margin-top:65px;
+            max-width:1440px;
+            margin:0 auto;
+            margin-top:35px;
+            padding:30px 20px 110px;
             overflow:hidden;
+            background-size:cover;
             @include mobile {
                 margin-top:20px;
+                padding-top:20px;
+                padding-bottom:70px;
             }
             .lists {
                 display:flex;
@@ -124,6 +138,7 @@
                         padding:70px 20px 45px;
                         border:1px solid $blur;
                         text-align:center;
+                        background:rgba($white, 0.8);
                         @include mobile {
                             padding:44px 20px 20px;
                         }
